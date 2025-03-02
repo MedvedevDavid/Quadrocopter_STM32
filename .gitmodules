@@ -1,0 +1,3 @@
+[submodule "QuadrocopterTest/googletest"]
+	path = QuadrocopterTest/googletest
+	url = https://github.com/google/googletest.git

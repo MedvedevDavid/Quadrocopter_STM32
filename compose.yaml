@@ -1,0 +1,9 @@
+services:
+  compiler:
+    build: .
+    volumes:
+      - .:/var/sw
+    devices:
+      - /dev/bus/usb/001/:/dev/bus/usb/001/
+    stdin_open: true 
+    tty: true

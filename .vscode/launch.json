@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/quadrocopter_low.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "serverpath": "/usr/bin/openocd",
+            "device": "STM32F401RE",
+            "preLaunchTask": "cargo build",
+            "runToEntryPoint": "main",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "rtos": "FreeRTOS"
+        },
+        {
+            "name": "Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/quadrocopter_low.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "serverpath": "/usr/bin/openocd",
+            "device": "STM32F401RE",
+            "runToEntryPoint": "main",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "svdFile": "tools/board_specific/STM32F401xE.svd",
+            "rtos": "FreeRTOS",
+            "showDevDebugOutput": "none"
+        }
+    ]
+}

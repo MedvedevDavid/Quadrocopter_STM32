@@ -13,7 +13,7 @@
                 "STM32F401xE"
             ],
             "windowsSdkVersion": "10.0.18362.0",
-            "compilerPath": "arm-none-eabi-g++",
+            "compilerPath": "/usr/bin/arm-none-eabi-g++",
             "compilerArgs": [
                 "-mcpu=cortex-m4",
                 "-mfloat-abi=hard",
